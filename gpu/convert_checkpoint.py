@@ -12,9 +12,10 @@ import model
 from pack_weight import convert_weight_int8_to_int2
 
 @torch.inference_mode()
+str = ""
 def convert_ts_checkpoint(
     *,
-    input_path: str = "",
+    input_path: str,
 ) -> None:
 
     config = model.ModelArgs()
@@ -98,3 +99,4 @@ if __name__ == '__main__':
     convert_ts_checkpoint(
         input_path=args.input,
     )
+
